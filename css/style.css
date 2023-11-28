@@ -7,9 +7,9 @@
 }
 
 .container {
-    width: 100%;
+    width: auto;
     margin: 0 auto;
-    padding: 0 5rem;
+    padding: 0 3rem;
     position: relative;
 }
 
@@ -81,22 +81,28 @@ nav {
 }
 
 .nav_items {
-    margin-top: -20px;
+    margin: 0px 30px;
+    transition: .4s;
 }
 
 nav ul {
     display: flex;
-    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: .4s;
 }
 
 nav ul a {
     text-decoration: none;
     text-transform: uppercase;
     transition: .4s;
-    font-size: 1.1vw;
+    font-size: 1rem;
     letter-spacing: 1px;
     color: rgb(22 28 45);
     font-weight: 400;
+    margin-right: 24px;
 }
 
 nav ul a:hover,
@@ -107,13 +113,14 @@ nav ul a.active {
 .nav_icon_box {
     display: flex;
     gap: 10px;
-    margin-top: -20px;
+    margin-top: 0px;
+    transition: .4s;
 }
 
 .nav_icon_box a {
     justify-content: center;
-    width: 2.6rem;
-    height: 2.6rem;
+    width: 2.7rem;
+    height: 2.7rem;
     font-size: 1.2rem;
     border-radius: 50%;
     transition: .4s;
@@ -135,6 +142,19 @@ nav ul a.active {
 
 .nav_icon_box a:nth-child(2):hover {
     background: #ff0000;
+}
+
+.toggleMenu {
+    display: flex;
+}
+
+.toggleBtn {
+    display: none;
+    transition: .4s;
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    margin-left: 1.5rem;
 }
 
 /* navbar end */
@@ -222,7 +242,7 @@ nav ul a.active {
 }
 
 .banner_imgbox {
-    width: 550px;
+    width: 650px;
     height: 450px;
     margin: 12.6rem 0 0 1rem;
     position: relative;
@@ -232,60 +252,61 @@ nav ul a.active {
     position: absolute;
     z-index: 4;
     top: 0;
-    left: 0;
+    left: -40%;
     width: 100%;
     height: 100%;
 }
 
 .banner_imgbox img:nth-child(1) {
     opacity: 1;
-    animation: fade_img 3.5s infinite alternate;
+    animation: fade_img 2s infinite alternate;
+    left: -29%;
 }
 
 .banner_imgbox img:nth-child(2) {
     opacity: 0;
-    animation: fade_img2 3.5s infinite alternate;
-    animation-delay: 3.5s;
+    animation: fade_img2 2s infinite alternate;
+    animation-delay: 2s;
 }
 
 @keyframes fade_img {
     0% {
-        opacity: 0;
+        opacity: 1;
 
     }
-
+/* 
     25% {
-        opacity: 0;
+        opacity: 1;
 
     }
 
     75% {
-        opacity: 1;
+        opacity: 0;
 
-    }
+    } */
 
     100% {
-        opacity: 1;
+        opacity: 0;
     }
 }
 
 @keyframes fade_img2 {
     0% {
-        opacity: 0;
+        opacity: 1;
     }
-
+/* 
     25% {
-        opacity: 0;
+        opacity: 1;
     }
 
     75% {
 
-        opacity: 1;
-    }
+        opacity: 0;
+    } */
 
     100% {
 
-        opacity: 1;
+        opacity: 0;
     }
 }
 
@@ -300,7 +321,7 @@ nav ul a.active {
 .quality_flex {
     width: 100%;
     flex-wrap: wrap;
-    height: 250px;
+    /* height: 250px; */
 }
 
 .quality_box {
@@ -511,7 +532,7 @@ nav ul a.active {
 }
 
 .slide .item {
-    width: 97%;
+    width: 96%;
     height: 90%;
     box-shadow: 0px 0px 5px 3px rgba(0, 3, 2, 0.3);
     transition: .4s;
@@ -530,6 +551,8 @@ nav ul a.active {
     font-size: 70px !important;
     color: #c31d1d !important;
     margin-top: 5px !important;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 /* work end */
@@ -642,8 +665,8 @@ nav ul a.active {
     justify-content: center;
     border-radius: 50%;
     box-shadow: none;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     margin-left: 50%;
     transform: translateX(-50%);
     box-shadow: none;
@@ -652,13 +675,23 @@ nav ul a.active {
 
 }
 
-.teamImg img {
+/* .teamImg img {
     position: absolute;
     z-index: -1;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 50%;
+} */
+
+.teamImg img {
+    position: absolute;
+    z-index: -1;
+    top: 2px;
+    left: -90px;
+    width: 150%;
+    height: 110%;
     border-radius: 50%;
 }
 
@@ -691,8 +724,8 @@ nav ul a.active {
 }
 
 .contactIcon {
-height: 3.8rem;
-padding: 1.1rem;
+    height: 3.8rem;
+    padding: 1.1rem;
 }
 
 .contact_textBox {
@@ -700,10 +733,11 @@ padding: 1.1rem;
 }
 
 .contact_textBox h1 {
-font-size: 1.3rem;
-font-weight: 400;
-margin-bottom: 10px;
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 10px;
 }
+
 .contact_textBox p {
     line-height: 1.5 !important;
 }
@@ -711,13 +745,14 @@ margin-bottom: 10px;
 .mtt {
     margin-top: 3.4rem;
 }
+
 /* contact end */
 
 
 /* footer end */
 footer {
     padding: 40px 0px;
-    background:rgb(22, 28, 45);
+    background: rgb(22, 28, 45);
 }
 
 footer h1 {
@@ -738,18 +773,19 @@ footer h1 {
     margin-top: 0;
 }
 
-.footerLink a{
-border-radius: .5rem !important;
-font-size: 1.4rem;
-color: white !important;
-border:3px solid rgba(255, 255, 255, 0.1)!important;
-background: rgba(255, 255, 255, 0.05) !important;
+.footerLink a {
+    border-radius: .5rem !important;
+    font-size: 1.4rem;
+    color: white !important;
+    border: 3px solid rgba(255, 255, 255, 0.1) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
 }
 
 .footerLink a:hover {
-    border:1px solid rgba(255, 0, 0, 0.1)!important;
-background: #c31d1d!important;
+    border: 1px solid rgba(255, 0, 0, 0.1) !important;
+    background: #c31d1d !important;
 }
+
 /* footer end */
 /* cv start */
 #cv {
@@ -763,6 +799,7 @@ background: #c31d1d!important;
 #cv .title p {
     text-align: left;
 }
+
 .form {
     display: flex;
     flex-direction: column;
@@ -775,6 +812,7 @@ background: #c31d1d!important;
     font-weight: 400;
     margin: 5px 0px 0px .5rem;
 }
+
 .form input {
     padding: .8rem 0 .8rem 1rem;
     width: 95%;
@@ -784,8 +822,10 @@ background: #c31d1d!important;
     border: 2px solid rgb(105 91 91 / 10%);
     margin: 10px 0px;
 }
+
 .formBtn {
     width: 200px;
     font-size: 1.2rem;
 }
+
 /* cv end */
